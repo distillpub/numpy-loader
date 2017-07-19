@@ -1,0 +1,26 @@
+{
+  "name": "numpy-loader",
+  "version": "1.0.0",
+  "description": "A webpack loader for binary numpy .npy files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/distillpub/numpy-loader.git"
+  },
+  "author": "Ludwig Schubert",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/distillpub/numpy-loader/issues"
+  },
+  "homepage": "https://github.com/distillpub/numpy-loader#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "loader-utils": "^1.1.0",
+    "ndarray": "^1.0.18",
+    "numpy-parser": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}
