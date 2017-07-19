@@ -14,11 +14,11 @@ module.exports = function(content) {
   this.emitFile(outputPath, content);
 
   // create runtime
-  const absoluteNumpyParserPath = require.resolve('numpy-parser')
-  const relativeNumpyParserPath = loaderUtils.stringifyRequest(this, "!" + absoluteNumpyParserPath);
+  // const absoluteNumpyParserPath = require.resolve('numpy-parser')
+  // const relativeNumpyParserPath = loaderUtils.stringifyRequest(this, "!" + absoluteNumpyParserPath);
 
   return `
-  const NumpyParser = require(${relativeNumpyParserPath});
+  const NumpyParser = require("numpy-parser");
   const NDArray = require("ndarray");
 
   function ajax(url, callback) {
