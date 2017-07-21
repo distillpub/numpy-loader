@@ -1,6 +1,6 @@
 {
   "name": "numpy-loader",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A webpack loader for binary numpy .npy files",
   "main": "src/main.js",
   "scripts": {
