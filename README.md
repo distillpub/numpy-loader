@@ -1,4 +1,7 @@
 # numpy-loader
+
+![npm-version](https://img.shields.io/npm/v/numpy-loader.svg)
+
 A webpack loader for binary numpy .npy files
 
 
