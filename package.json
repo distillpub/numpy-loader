@@ -2,9 +2,9 @@
   "name": "numpy-loader",
   "version": "1.0.2",
   "description": "A webpack loader for binary numpy .npy files",
-  "main": "index.js",
+  "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,14 @@
   },
   "homepage": "https://github.com/distillpub/numpy-loader#readme",
   "dependencies": {
-    "assert": "^1.4.1",
+    "fs": "^0.0.1-security",
     "loader-utils": "^1.1.0",
     "ndarray": "^1.0.18",
     "numpy-parser": "^1.0.0",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "mocha": "^3.4.2"
   }
 }
