@@ -1,7 +1,7 @@
-const assert = require('assert'),
-      loaderUtils = require('loader-utils'),
-      path = require('path');
-      fs = require('fs');
+const assert = require('assert');
+const loaderUtils = require('loader-utils');
+const path = require('path');
+const fs = require('fs');
 
 module.exports = function(content) {
   console.log('Distill Numpy Loader says "Hi"! \\o/');
