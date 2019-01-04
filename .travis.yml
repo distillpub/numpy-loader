@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- stable
+- '6'
+deploy:
+  provider: npm
+  email: ludwig@cs.stanford.edu
+  api_key:
+    secure: P1LUg6Jr6l4nq/Af+dgCzhkzTJYs/K0b6fh/IOT6JVocqQwGBSHVAy8nAxvNUVnSggJ4VlZDA/Zhox+f/bAI0A4EXBNIRngrYnlgtlS6YGCQHCsL4P9dKSjvRbNl+8BdjbneTdxfv5IKdLArYD+aifDatSsqEeYUJfFSraLQn8IzC8Qjry2Zr5O1Sg+9QxgD267mHHx9kQucYGwUGM0B1eLza9oodkVI1YRTuNsxVxQ+nN9ppzFdYaCkRnhsOecwO2mXQOxeaTQMCzep3k1427vK4genWsqUR8Oa6CfOiYQCXt7toqiENV88iuqUfW0QRiO6fzsm0um8eIdm+/DqsacIXVMytyNDUJ/h0ua0OFPObHG/4fgDb3HtoqlQF1z1mjT0kviCBFIyDITIjVwrWCzhD1LFvfUq8stygxjxmNdL2Kmxm1UX6SfueFGrVMJxbg5x6e8WVnzQC2wqZSfyPc7IFYLdyRU+/Bexp+mPC6oByYM+mcNk2B4M5H7CYvlkIUbcdpfDVfF6OzbOLayILdPmG7kn1yl+ouOt4VeENqZkes1ISOo4hE97pXEfABws6LEQnPisnAGww7cGzbWEqx+4rOTsNJiNFzmTh+MsIhrW/iTqCdI21oHwoAoJ7PdN4jUi539DX2ohDU3PfJ0cqK0XOaZ7YlY4PqeRXIdawis=
+  on:
+    tags: true
+    repo: ludwigschubert/numpy-loader
