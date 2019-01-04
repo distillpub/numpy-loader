@@ -36,11 +36,14 @@ module.exports = function(content) {
 
     function ajax(url, callback) {
         var xhr = new XMLHttpRequest();
-        xhr.onload = function(e) {
-            var buffer = xhr.response; // not responseText
-            var result = NumpyParser.fromArrayBuffer(buffer);
-            callback(result);
+        xhr.onload = function(evt) {
+          var buffer = xhr.response; // not responseText
+          var result = NumpyParser.fromArrayBuffer(buffer);
+          callback(null, result);
         };
+        xhr.onerror = function(evt) {
+          callback(new Error("numpy-parser failed to fetch: " + url))
+        }
         xhr.open("GET", url, true);
         xhr.responseType = "arraybuffer";
         xhr.send(null);
@@ -48,9 +51,10 @@ module.exports = function(content) {
 
     module.exports = {
       load: function(callback) {
-        ajax("${outputPath}", function(data) {
+        ajax("${outputPath}", function(error, data) {
+          if(error) return callback(error);
           const result = NDArray(data.data, data.shape);
-          callback(result);
+          callback(error, result);
         });
       }
     };
